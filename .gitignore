@@ -1,0 +1,6 @@
+DRIVE/
+training/
+manual/
+*.jpg
+*.pth
+.ipynb_checkpoints/
