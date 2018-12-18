@@ -4,3 +4,6 @@ manual/
 *.jpg
 *.pth
 .ipynb_checkpoints/
+STARE/
+*.gif
+*.tif
