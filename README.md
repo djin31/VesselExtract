@@ -2,10 +2,24 @@
 [U-net](https://arxiv.org/abs/1505.04597) based CNN for segmenting blood vessel and thereafter removal of vessels from fundus image to allow better diagnostic models using classifiers trained on top of this cleaned up version of fundus as well as classifiers trained to analyse the vessel maps to identify clinical features associated with vessel shapes, like vessel tortuosity.
 
 ## Training Data
-Training Data is obtained from [DRIVE](https://www.isi.uu.nl/Research/Databases/DRIVE/) and [STARE](http://cecas.clemson.edu/~ahoover/stare/) datasets.
+Training Data is obtained from [DRIVE](https://www.isi.uu.nl/Research/Databases/DRIVE/) and [STARE](http://cecas.clemson.edu/~ahoover/stare/) datasets. For STARE dataset the target vessel map annotated by Valentina Kouznetsova is used since it was more detailed.
 
 ## Data preprocessing and Dataset generation
 The notebook [generate_patches](generate_patches.ipynb) is used for generating of a vast dataset of `256 X 256` patches from the images available in DRIVE and STARE datasets. The patches are generated at random. For robust training patches involving flipping of image and addition of noise are also generated.
+In order to use the notebook without any changes ensure following tree structure for storing DRIVE and STARE datasets:
+```
+VesselExtract/
+├── DRIVE
+│   ├── test
+│   └── training
+├── STARE
+│   ├── labels-vk
+│   └── stare-images
+├── generate_patches.ipynb
+├── README.md
+├── research_model.ipynb
+├── run_tests.ipynb
+```
 
 ## Model
 The training of model for vessel segmentation is done in the notebook [research_model](research_model.ipynb). Results of vessel segmentation in presence of various clinical features is also documented.
