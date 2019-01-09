@@ -26,6 +26,16 @@ The training of model for vessel segmentation is done in the notebook [research_
 
 ## Tests and Vessel Removal
 Various tests to evaluate the quality of vessel maps generated against the vessel maps available in the database can be found in [run_tests](run_tests.ipynb). Also an attempt to cleanup the fundus image by removing the vessel map has been done by using mean colour of local neighbourhood (`32X32, 16X16, 8X8 and 4X4 surrounding patches`) to fill up the pixels corresponding to vessels.
+aem
+## Some interesting samples 
+### DRIVE Test image
+<img src="https://github.com/djin31/VesselExtract/blob/master/readme_images/drive.png?raw=True">
+
+### Diabetic Retinopathy
+<img src="https://github.com/djin31/VesselExtract/blob/master/readme_images/dr.png?raw=True">
+
+### Haemorrhage
+<img src="https://github.com/djin31/VesselExtract/blob/master/readme_images/haem.png?raw=True">
 
 ## MATLAB code
 A MATLAB code for vessel extraction is also available in [vessel_extraction.m](vessel_extraction.m). This was taken from [here](https://in.mathworks.com/matlabcentral/fileexchange/24990-retinal-blood-vessel-extraction). However this is terribly slow and is not very accurate. Placed here as baseline.
