@@ -39,3 +39,16 @@ Various tests to evaluate the quality of vessel maps generated against the vesse
 
 ## MATLAB code
 A MATLAB code for vessel extraction is also available in [vessel_extraction.m](vessel_extraction.m). This was taken from [here](https://in.mathworks.com/matlabcentral/fileexchange/24990-retinal-blood-vessel-extraction). However this is terribly slow and is not very accurate. Placed here as baseline.
+
+## Citation
+If you use this code for research, please cite:
+```
+@misc{vesselextract18,
+  author = {Jindal, Deepanshu},
+  title = {Vessel Extract},
+  year = {2018},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/djin31/VesselExtract}}
+}
+```
